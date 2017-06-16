@@ -10,3 +10,5 @@ augroup qf
     autocmd FileType qf wincmd J
 augroup END
 
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'jistr/vim-nerdtree-tabs'
