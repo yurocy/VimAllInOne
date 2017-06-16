@@ -71,6 +71,8 @@ else
 endif
 scriptencoding utf-8
 
+let mapleader = ' '
+let maplocalleader=mapleader
 "/////////////////////////////////////////////////////////////////////////////
 " Bundle steup
 "/////////////////////////////////////////////////////////////////////////////
@@ -178,6 +180,7 @@ set matchtime=0 " 0 second to show the matching paren ( much faster )
 set nu " show line number
 set scrolloff=0 " minimal number of screen lines to keep above and below the cursor
 set nowrap " do not wrap text
+set cursorline
 
 " only supoort in 7.3 or higher
 if v:version >= 703
@@ -294,8 +297,8 @@ function! g:MyDiff()
     silent execute '!' .  'diff ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
 endfunction
 
-set cindent shiftwidth=2 " set cindent on to autoinent when editing c/c++ file, with 4 shift width
-set tabstop=2 " set tabstop to 4 characters
+set cindent shiftwidth=4 " set cindent on to autoinent when editing c/c++ file, with 4 shift width
+set tabstop=4 " set tabstop to 4 characters
 set expandtab " set expandtab on, the tab will be change to space automaticaly
 set ve=block " in visual block mode, cursor can be positioned where there is no actual character
 
@@ -455,10 +458,11 @@ nnoremap <leader>/ :let @/=""<CR>
 " nnoremap <leader>/ :nohlsearch<CR>
 
 " map Ctrl-Tab to switch window
-nnoremap <S-Up> <C-W><Up>
-nnoremap <S-Down> <C-W><Down>
-nnoremap <S-Left> <C-W><Left>
-nnoremap <S-Right> <C-W><Right>
+nnoremap <leader>wk <C-W><Up>
+nnoremap <leader>wj <C-W><Down>
+nnoremap <leader>wh <C-W><Left>
+nnoremap <leader>wl <C-W><Right>
+nnoremap <leader>wm <C-W>_
 
 " easy buffer navigation
 " NOTE: if we already map to EXbn,EXbp. skip setting this
