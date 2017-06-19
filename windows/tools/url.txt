@@ -1,0 +1,6 @@
+cTags 5.8 	zip 	http://ctags.sourceforge.net/
+cscope 15.7a 	zip 	http://cscope.sourceforge.net/
+sed 4.2.1 	zip 	http://gnuwin32.sourceforge.net/packages/sed.htm
+gawk 3.1.6 	zip 	http://gnuwin32.sourceforge.net/packages/gawk.htm
+id-utils 4.0.2 	zip 	http://gnuwin32.sourceforge.net/packages/id-utils.htm
+graphviz 	download-page 	http://www.graphviz.org
