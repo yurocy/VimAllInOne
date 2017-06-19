@@ -15,7 +15,9 @@ if exist "%DEST%\id-lang-autogen.map" (
 rem if auto-gen map not exists we use default one in tools directory
     set LANG_MAP=%TOOLS%\idutils\id-lang.map
 )
-%MKID_CMD% --file="%TMP%" --include="text" --lang-map="%LANG_MAP%" --prune="%EXCLUDE_FOLDERS%"
+
+rem --prune="%EXCLUDE_FOLDERS%"
+%MKID_CMD% --file="%TMP%" --include="text" --lang-map="%LANG_MAP%" 
 
 rem replace old file
 if exist "%TMP%" (

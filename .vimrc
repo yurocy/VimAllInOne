@@ -3,6 +3,7 @@
 "/////////////////////////////////////////////////////////////////////////////
 
 set nocompatible " be iMproved, required
+set relativenumber    "相对行号  
 
 function! OSX()
     return has('macunix')
@@ -121,7 +122,7 @@ else
     set t_Co=256 " make sure our terminal use 256 color
     let g:solarized_termcolors = 256
 endif
-colorscheme solarized
+colorscheme monokai 
 " colorscheme exlightgray
 " colorscheme gruvbox
 

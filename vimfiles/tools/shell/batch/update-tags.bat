@@ -7,11 +7,12 @@ if exist "%TOOLS%\windows\ctags.exe" (
 )
 
 rem choose ctags path first
-if exist "%DEST%\files" (
-    set FILES=-L "%DEST%\files"
-) else (
-    set FILES=-R .
-)
+rem if exist "%DEST%\files" (
+rem    set FILES=-L "%DEST%\files"
+rem ) else (
+rem    set FILES=-R .
+rem )
+set FILES=-R .
 
 rem process tags by langugage
 echo   ^|- generate %TMP%

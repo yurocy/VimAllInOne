@@ -1,14 +1,2 @@
 " This file will be loaded at the end of .vimrc.
 " This file is designed to add your own vim scripts or override the exVim's .vimrc settings.
-
-" key binding
-inoremap jj <ESC>
-
-augroup qf
-    autocmd!
-    autocmd QuickFixCmdPost * cwindow
-    autocmd FileType qf wincmd J
-augroup END
-
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'jistr/vim-nerdtree-tabs'
