@@ -42,6 +42,7 @@ Plugin 'exvim/ex-vimentry'
 " ex-project
 " ---------------------------------------------------
 Plugin 'exvim/ex-project'
+nnoremap <unique> <silent> <F3> :EXProject<CR>
 
 " ex-gsearch
 " ---------------------------------------------------
