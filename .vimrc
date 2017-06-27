@@ -53,10 +53,6 @@ setglobal fileencoding=utf-8
 set fileencodings=utf-8,cp936,gb2312,gbk,gb18030,ucs-bom,utf-16le,cp1252,iso-8859-15
 set termencoding=utf-8
 scriptencoding utf-8
-"字体的设置
-set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
-"记住空格用下划线代替哦
-set gfw=幼圆:h10:cGB2312
 set fenc=utf-8
 
 let mapleader = ' '
@@ -187,8 +183,10 @@ if has('gui_running')
     " set guifont
     function! s:set_gui_font()
         if has('gui_gtk2')
-            if getfontname( 'DejaVu Sans Mono for Powerline' ) != ''
-                set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
+            "if getfontname( 'DejaVu Sans Mono for Powerline' ) != ''
+            "    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
+            if getfontname( 'Consolas' ) != ''
+                set guifont=Consolas:h11:cANSI
             elseif getfontname( 'DejaVu Sans Mono' ) != ''
                 set guifont=DejaVu\ Sans\ Mono\ 12
             else
@@ -204,8 +202,10 @@ if has('gui_running')
                 set guifont=DejaVu\ Sans\ Mono:h15
             endif
         elseif WINDOWS()
-            if getfontname( 'DejaVu Sans Mono for Powerline' ) != ''
-                set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11:cANSI
+            "if getfontname( 'DejaVu Sans Mono for Powerline' ) != ''
+            "    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11:cANSI
+            if getfontname( 'Consolas' ) != ''
+                set guifont=Consolas:h11:cANSI
             elseif getfontname( 'DejaVu Sans Mono' ) != ''
                 set guifont=DejaVu\ Sans\ Mono:h11:cANSI
             elseif getfontname( 'Consolas' ) != ''
