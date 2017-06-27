@@ -47,30 +47,17 @@ else
     endif
 endif
 
-" try to set encoding to utf-8
-if WINDOWS()
-    " Be nice and check for multi_byte even if the config requires
-    " multi_byte support most of the time
-    if has('multi_byte')
-        " Windows cmd.exe still uses cp850. If Windows ever moved to
-        " Powershell as the primary terminal, this would be utf-8
-        set termencoding=cp850
-        " Let Vim use utf-8 internally, because many scripts require this
-        set encoding=utf-8
-        setglobal fileencoding=utf-8
-        " Windows has traditionally used cp1252, so it's probably wise to
-        " fallback into cp1252 instead of eg. iso-8859-15.
-        " Newer Windows files might contain utf-8 or utf-16 LE so we might
-        " want to try them first.
-        set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
-    endif
-
-else
-    " set default encoding to utf-8
-    set encoding=utf-8
-    set termencoding=utf-8
-endif
+" Let Vim use utf-8 internally, because many scripts require this
+set encoding=utf-8
+setglobal fileencoding=utf-8
+set fileencodings=utf-8,cp936,gb2312,gbk,gb18030,ucs-bom,utf-16le,cp1252,iso-8859-15
+set termencoding=utf-8
 scriptencoding utf-8
+"字体的设置
+set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+"记住空格用下划线代替哦
+set gfw=幼圆:h10:cGB2312
+set fenc=utf-8
 
 let mapleader = ' '
 let maplocalleader=mapleader
