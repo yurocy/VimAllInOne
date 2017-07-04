@@ -254,7 +254,7 @@ set showfulltag " show tag with function protype.
 set guioptions+=b " present the bottom scrollbar when the longest visible line exceed the window
 
 " disable menu & toolbar
-set guioptions-=m
+" set guioptions-=m
 set guioptions-=T
 
 " ------------------------------------------------------------------
@@ -464,6 +464,13 @@ endif
 " easy diff goto
 noremap <C-k> [c
 noremap <C-j> ]c
+
+inoremap <c-h> <left>
+inoremap <c-l> <right>
+inoremap <c-j> <c-o>gj
+inoremap <c-k> <c-o>gk
+inoremap <c-d> <delete>
+inoremap <c-g> <left>
 
 " enhance '<' '>' , do not need to reselect the block after shift it.
 vnoremap < <gv
